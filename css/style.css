@@ -147,6 +147,9 @@ footer p {
 .textA{
   text-align: left;
   margin-top: 35px;
+  font-family: "Zen Kurenaido", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
@@ -159,9 +162,7 @@ footer p {
 
 .text p{
   margin-top: 20px;
-     font-family: "Zen Kurenaido", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+ 
 }
 
 
