@@ -123,10 +123,13 @@ color:#fcf25c;
 }
 
 main h2 {
-  font-family: 'Kalam','Kiwi Maru', cursive, serif;
+ font-family: "louvette-display", serif;
+font-weight: 500;
+font-style: normal;
   font-size: 30px;
   color: #8a6856;
   text-align: center;
+    
 }
 
 
