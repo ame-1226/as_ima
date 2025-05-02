@@ -133,7 +133,9 @@ main li a:hover {
 }
 
 .main-menu {
-  font-family: 'Kalam','Kiwi Maru', cursive, serif;
+ font-family: "Alkalami", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 
