@@ -138,11 +138,10 @@ main a p:hover{
   }
 
   .pictA{
-  /*max-width: 600px;*/
+  max-width: 38%;
   height: auto;
-  
-  text-align:center;
- 
+  margin: auto;
+  display: block;
 }
 
 .box {
