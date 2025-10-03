@@ -8,18 +8,18 @@
 }
 
 :root{
-  --maincolor : rgb(96, 101, 114) ; 
-  --subcoler:#d9e170;
-  --textcoler:#FFF;
+  --maincolor :#fad4c0; 
+  --subcolor:#ffecdc;
+  --textcolor:#cba135;
   }
 
 body {
-  background-color:var(--maincolor);
+  background-color:var(--subcolor);
 }
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--textcolor);
 }
 
 .textA{
@@ -28,13 +28,13 @@ h1 {
 }
 
 p {
-  color: var(--textcoler);
+  color: var(--textcolor);
   
 }
 
 header {
   background: var(--maincolor);
-  color: #FFF;
+  color: var(--textcolor);
   padding: 10px 20px;
   position: relative;
   position: sticky;
@@ -48,11 +48,11 @@ header h1 {
 }
 
 header h1 a {
-  color: #FFF;
+  color: var(--textcolor);
 }
 
 .header h1 a:hover {
-color:var(--subcoler);
+color:var(--subcolor);
 }
 
 .main-menu {
@@ -70,7 +70,7 @@ color:var(--subcoler);
 }
 
 .main-menu ul li a {
-  color: #FFF;
+  color: var(--textcolor);
   width: auto;
   margin-right: 20px;
   font-size: 20px;
@@ -78,7 +78,7 @@ color:var(--subcoler);
 
 .main-menu ul li a:hover {
   background: var(--maincolor);
-  color: var(--subcoler);
+  color: var(--subcolor);
 }
 
 
@@ -101,7 +101,7 @@ main {
 }
 
 main a p:hover{
-  color: var(--subcoler);
+  color: var(--subcolor);
 }
 
 #gallery {
@@ -130,7 +130,7 @@ main a p:hover{
 
   footer {
     background: var(--maincolor);
-    color: #FFF;
+    color: var(--textcolor);
     padding: 20px;
     text-align: center;
     font-family: "louvette-display", serif;
@@ -148,7 +148,7 @@ main a p:hover{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: var(--maincolor);
+  background: var(--subcolor);
   align-items: center;
   
 }
@@ -165,7 +165,7 @@ main a p:hover{
 }
 
 main h2{
-  color: var(--textcoler);
+  color: var(--textcolor);
   text-align: center;
 }
 
@@ -203,7 +203,7 @@ a.pagetop {
   box-sizing: border-box;
   padding-top: 12px;
   border-radius: 10px;
-  background-color: var(--subcoler);
+  background-color: var(--subcolor);
   color: var(--maincolor);
   position: fixed;
   bottom: 10px;
@@ -228,7 +228,7 @@ html {
   }
 
   .main-menu ul li a {
-    color: #FFF;
+    color: var(--textcolor);
     width: auto;
     margin-right: 20px;
     font-size: 18px;
