@@ -9,7 +9,7 @@
 
 :root{
   --maincolor :#fad4c0; 
-  --subcolor:#ffecdc;
+  --subcolor:#faf0e9;
   --textcolor:#cba135;
   --hovercolor:#b2afa7;
 }
@@ -21,6 +21,10 @@ body {
   background-image: url(../images/back.png);
 }
 
+
+article{
+ margin: 40px;
+}
 
 /*text*/
 p{
@@ -126,7 +130,7 @@ main a p:hover{
   display: flex;             
   justify-content: center; 
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto; 
@@ -134,21 +138,20 @@ main a p:hover{
 }
 
 .pict {
-  flex: 2;
+  width: 50%;
 }
 
 .text {
   text-align: left;
   margin-left: 20px;
-  flex: 1;
- 
+  width: 50%;
 }
 
 .icon img{
   flex: 2;
   border-radius: 50%; 
   display: block; 
-  max-width: 100px;
+  max-width: 200px;
   height: auto;
 }
 
