@@ -18,11 +18,11 @@
 
 body {
   background-color:var(--subcolor);
-  background-image: url(../images/back.png);
+  /*background-image: url(../images/back.png);*/
 }
 
 article{
-  margin: 1rem;
+  margin: 8rem 4rem;
 
 }
 
@@ -41,6 +41,7 @@ main h2{
   color: var(--textcolor);
   text-align: center;
   padding-top: 15px;
+  margin: 2rem;
 }
 
 main a p:hover{
@@ -59,19 +60,34 @@ main a p:hover{
 
 .textC{
   text-align: left;
-  margin: 4rem;/*上・右・下・左*/
-  padding: 2rem;
+  flex: 1;
+  margin: 2rem;/*上・右・下・左*/
   background-color: var(--maincolor);
   border-radius: 20px;
 }
 
+.textC p{
+  padding: 2rem;
+}
+
 .textC h2{
   text-align: left;
-  margin: 10px 20px ;
+  margin: 0 2rem ;
 }
 
 .text{
-  padding: 20px;
+  justify-content: center;
+}
+
+.text p{
+  width: 80%;
+  text-align: left; 
+}
+
+.textD{
+  width: 80%;
+  margin: 2rem auto;         
+  text-align: left; 
 }
 
 
@@ -184,7 +200,7 @@ main p a{
   max-width: 1080px;
   margin: 30px 0 30px 0; /*上・右・下・左*/
   padding: 2rem 0 2rem 0;
-  scroll-margin-top: 80px; 
+  scroll-margin-top: 10px; 
 }
 
 .box2{
@@ -194,10 +210,20 @@ main p a{
   gap: 60px;
   width: 100%;
   max-width: 1080px;
-  margin: 1rem; 
-  scroll-margin-top: 80px; 
+  margin: 1rem auto; 
 }
 
+.box3{
+  display: flex;             
+  justify-content: center; 
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 30px 0 30px 0; /*上・右・下・左*/
+  padding: 2rem 0 2rem 0;
+  scroll-margin-top: 80px; 
+}
 
 
 
@@ -305,6 +331,7 @@ img {
   justify-items: center; /* 中央寄せ */
   flex: 1;
   padding-right: 40px;
+  
 }
 
 .pictD{
@@ -319,12 +346,11 @@ img {
 }
 
 .icon img{
-  flex: 2;
+  flex: 1;
   border-radius: 50%; 
   display: block; 
   max-width: 200px;
   height: auto;
-  margin-left: 20px;
 }
 
 .img-item{
@@ -377,6 +403,10 @@ html {
     
   }
 
+  article{
+    margin: 4rem 2rem;
+  }
+
   .sub-menu ul li {
     text-align: center;
   }
@@ -387,8 +417,12 @@ html {
     
   }
 
+  main p{
+    font-size: 13px;
+  }
+
   main h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .text{
@@ -403,5 +437,29 @@ html {
     grid-template-columns: 1fr 1fr;
   
   }
+
+  .box{
+    flex-direction: column;
+    scroll-margin-top: 15px;
+  }
+
+  .box2{
+    flex-direction: column;
+  }
+ 
+  .textC p{
+  font-size: 13px;
+  margin-top: 0;
+ }
+
+ .textC h2{
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 0;
+ }
+ 
+ .textC{
+  margin: 1rem;
+ }
 
 }
