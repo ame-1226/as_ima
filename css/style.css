@@ -310,7 +310,7 @@ img {
 }
 
 .pictB img{
-  border-radius: 50px; 
+  border-radius: 10px; 
 
 }
 
@@ -351,6 +351,7 @@ img {
   display: block; 
   max-width: 200px;
   height: auto;
+  background-color: var(--maincolor);
 }
 
 .img-item{
