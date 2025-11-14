@@ -8,10 +8,14 @@
 }
 
 :root{
-  --maincolor :#fad4c0; 
-  --subcolor:#faf0e9;
-  --textcolor:#cba135;
+  --maincolor :#5C4636; 
+  --subcolor:#FFFAF4;
+  --textcolor:#553501;
+  --maintextcolor:#cba135;
   --hovercolor:#b2afa7;
+  --tukinecolor:#E6B24C;
+  --shiratamacolor:#BD7071;
+  --shitextcolor:#f4dfbb;
 }
 
 
@@ -21,9 +25,29 @@ body {
   /*background-image: url(../images/back.png);*/
 }
 
-article{
-  margin: 8rem 4rem;
+/*header&footer色変更*/
+body.honey{
+  --maincolor: #f7ba4f;
+  --maintextcolor:#553501;
+  --hovercolor:#9c9992;
+}
 
+body.nemophila{
+  --maincolor: #5e88c5;
+  --maintextcolor:#e0b548;
+}
+
+body.letter{
+  --maincolor: #b6acd3;
+   --maintextcolor:#354b64;
+  --hovercolor:#797b82;
+
+}
+
+
+article{
+  margin: 6rem 2rem 10rem 2rem;/*上・右・下・左*/
+  scroll-margin-top: 60px;
 }
 
 
@@ -37,11 +61,17 @@ h2{
   text-align: center;
 }
 
+h3{
+  color: var(--textcolor);
+  text-align: center;
+}
+
 main h2{
   color: var(--textcolor);
   text-align: center;
   padding-top: 15px;
   margin: 2rem;
+  font-size: 25pt;
 }
 
 main a p:hover{
@@ -49,38 +79,66 @@ main a p:hover{
 }
 
 .textA{
-  padding: 10px;
-  text-align: left;
+  padding: 2rem;
+  text-align: center;
 }
 
 .textB{
    padding: 10px;
   text-align: right;
+  margin: 0px 20px;
 }
 
-.textC{
-  text-align: left;
-  flex: 1;
-  margin: 2rem;/*上・右・下・左*/
-  background-color: var(--maincolor);
+/*制作者コメント月音*/
+.textC1{
+  justify-content: center;
+  flex: 2;
+  margin: 1rem;/*上・右・下・左*/
+  background-color: var(--tukinecolor);
   border-radius: 20px;
 }
 
-.textC p{
+.textC1 p{
+  text-align: left;
+  color: var(--textcolor);
   padding: 2rem;
 }
 
-.textC h2{
+.textC1 h2{
+  color: var(--textcolor);
   text-align: left;
   margin: 0 2rem ;
 }
+
+/*制作者コメントしらたま*/
+.textC2{
+  justify-content: center;
+  flex: 2;
+  margin: 1rem;/*上・右・下・左*/
+  background-color: var(--shiratamacolor);
+  border-radius: 20px;
+}
+
+.textC2 p{
+  text-align: left;
+  color: var(--shitextcolor);
+  padding: 2rem;
+}
+
+.textC2 h2{
+  color: var(--shitextcolor);
+  text-align: left;
+  margin: 0 2rem ;
+}
+
 
 .text{
   justify-content: center;
 }
 
 .text p{
-  width: 80%;
+  font-size: 12px;
+  margin: 5px 4rem;
   text-align: left; 
 }
 
@@ -90,13 +148,49 @@ main a p:hover{
   text-align: left; 
 }
 
+.textE{
+  justify-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.charaT{
+  flex: 2;
+  text-align: left;
+  /*max-width: 800px;*/
+  /*margin-right: 4rem;*/
+}
+
+.charaT h3{
+font-size: 15pt;
+margin-bottom: 10px;
+}
+
+/*アイコンテキスト*/
+.icon1 h3{
+color: var(--tukinecolor);
+}
+
+.icon2 h3{
+color: var(--shiratamacolor);
+}
+
+article h2{
+  font-size: 20pt;
+}
+
+/*制作順テキスト*/
+.order h3{
+margin-bottom: 10px;
+font-size: 17pt;
+}
 
 
 
 /*header*/
 header {
   background: var(--maincolor);
-  color: var(--textcolor);
+  color: var(--maintextcolor);
   padding: 10px 20px;
   position: relative;
   position: sticky;
@@ -106,14 +200,14 @@ header {
 }
 
 header h1 {
-  font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
+  font-family: "firula","louvette-display","hiragino-mincho-pron", cursive, sans-serif;
   font-size: 30px;
   text-align: center;
   padding: 6px 0;
 }
 
 header h1 a {
-  color: var(--textcolor);
+  color: var(--maintextcolor);
 }
 
 .header h1 a:hover {
@@ -130,12 +224,17 @@ color:var(--hovercolor);
 
 footer {
   background: var(--maincolor);
-  color: var(--textcolor);
-  padding: 20px;
+  color: var(--maintextcolor); 
+}
+
+footer p{
+  color: var(--maintextcolor);
+  padding: 40px;
   text-align: center;
   font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
-    
 }
+
+
 
 
 
@@ -155,7 +254,7 @@ footer {
 }
 
 .main-menu ul li a {
-  color: var(--textcolor);
+  color: var(--maintextcolor);
   width: auto;
   margin-right: 20px;
   font-size: 20px;
@@ -166,7 +265,7 @@ footer {
 /*main*/
 main {
   z-index: 10;
-   width: 84%;
+  width: 84%;
   max-width: 1280px;
   height: auto;
   font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
@@ -191,6 +290,7 @@ main p a{
 }
 
 
+/*コンテンツbox*/
 .box{
   display: flex;             
   justify-content: center; 
@@ -198,16 +298,27 @@ main p a{
   gap: 60px;
   width: 100%;
   max-width: 1080px;
-  margin: 30px 0 30px 0; /*上・右・下・左*/
+  margin: 30px 4rem; /*上・右・下・左*/
   padding: 2rem 0 2rem 0;
-  scroll-margin-top: 10px; 
+   
 }
 
-.box2{
+.box2_1{
   display: flex;             
   justify-content: center; 
   align-items: center;
-  gap: 60px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 1rem auto; 
+}
+
+.box2_2{
+  display: flex;   
+  flex-direction: row-reverse;         
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;
   width: 100%;
   max-width: 1080px;
   margin: 1rem auto; 
@@ -217,16 +328,61 @@ main p a{
   display: flex;             
   justify-content: center; 
   align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 30px 4rem; /*上・右・下・左*/
+ 
+}
+
+.box4{
+ text-align: center;
   gap: 60px;
   width: 100%;
   max-width: 1080px;
-  margin: 30px 0 30px 0; /*上・右・下・左*/
-  padding: 2rem 0 2rem 0;
-  scroll-margin-top: 80px; 
+  margin: 1rem auto; 
+}
+
+.box5{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.box6{
+  display: flex;
+  flex-direction: row-reverse; /* ← 並びを逆に */
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 3rem;
+  max-width: 100%;
+  height: auto;
+  
+}
+
+article h2{
+  scroll-margin-top: 300px;
+}
+
+/*制作順*/
+.order{
+  border: 3px solid var(--maincolor);
+  outline: 2px solid var(--maincolor);
+  outline-offset: -7px; /* 内側に寄せる */
+  border-radius: 50px; 
+  padding: 10px;
+  margin: 2rem;
 }
 
 
+.icon1{
+  margin: 2rem;
+}
 
+.icon2{
+  margin: 2rem;
+}
 
 
 /*ボタン要素*/
@@ -240,7 +396,7 @@ a.button {
   display: inline-block;       /* 横幅を文字に合わせる */
   padding: 8px 16px;           /* 上下8px 左右16pxの余白 */
   margin: 4px;                 /* リンク間の余白 */
-  color: var(--textcolor);              /* 文字色 */
+  color: var(--maintextcolor);              /* 文字色 */
   background-color: var(--maincolor);   /* 背景色 */
   border-radius: 20px;         /* 角丸 */
   text-decoration: none;       /* 下線を消す */
@@ -250,8 +406,8 @@ a.button {
 
 /* ホバー時 */
 a.button:hover {
-  background-color: var(--subcolor);  
-               
+  background-color: var(--maintextcolor);  
+  color: var(--maincolor);             
 }
 
 
@@ -300,26 +456,39 @@ img {
 .pictB{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 40px;
   justify-items: center;
-  margin: 20px auto; /* ← autoで中央寄せ */
-  max-width: 900px;
+  margin: 2rem 4rem; /* ← autoで中央寄せ */
+  max-width: 100%;
   height: auto;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 150px;
  
+}
+
+.pictB .wide{
+  grid-column: 1 / -1; /* ← 1段目を「1列使い」ではなく「2列またぎ」にする */
 }
 
 .pictB img{
   border-radius: 10px; 
-
+  
 }
 
 .pictA{
   display: inline-block;
   text-align: center;
-  max-width:550px ;
+  max-width:100% ;
   height: auto;
-  flex: 1;
+  flex: 3;
+   scroll-margin-top: 150px;
+   margin-right: 2rem;
+   background-color: var(--maincolor);
+   border-radius: 10px;
+}
+
+.pictA img{
+  border-radius: 10px; 
+  
 }
 
 .pictC{
@@ -339,11 +508,20 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   justify-items: center;
-  margin: 20px auto; /* ← autoで中央寄せ */
-  max-width: 900px;
+  margin: 2rem 4rem; /* ← autoで中央寄せ */
+  max-width: 100%;
   height: auto;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 150px;
 }
+
+.pictE{
+  flex: 1;
+  margin: 2rem 2rem 2rem 3rem;/*上・右・下・左*/
+  max-width: 80%;
+  height: auto;
+  text-align: center;
+}
+
 
 .icon img{
   flex: 1;
@@ -353,6 +531,28 @@ img {
   height: auto;
   background-color: var(--maincolor);
 }
+
+.icon1 img{
+  
+  flex: 1;
+  border-radius: 50%; 
+  display: block; 
+  max-width: 150px;
+  height: auto;
+  border: 5px solid var(--tukinecolor); 
+  text-align: center;
+}
+
+.icon2 img{
+  
+  flex: 1;
+  border-radius: 50%; 
+  display: block; 
+  max-width: 150px;
+  height: auto;
+ border: 5px solid var(--shiratamacolor); 
+}
+
 
 .img-item{
   margin: 2rem;
@@ -382,6 +582,11 @@ html {
 
 /*スマホ用*/
 @media all and (max-width: 599px) {
+
+  header h1 {
+  text-align: left;
+  
+  }
   
   .main-menu ul {
     display: flex;
@@ -393,7 +598,6 @@ html {
   }
 
   .main-menu ul li a {
-    color: var(--textcolor);
     width: auto;
     margin-right: 20px;
     font-size: 18px;
@@ -405,7 +609,7 @@ html {
   }
 
   article{
-    margin: 4rem 2rem;
+    margin: 1rem 0;
   }
 
   .sub-menu ul li {
@@ -441,13 +645,68 @@ html {
 
   .box{
     flex-direction: column;
+    margin: 1rem;
     scroll-margin-top: 15px;
   }
 
-  .box2{
-    flex-direction: column;
+  .charaT{
+    flex: 1;
+  }
+
+  .pictA{
+    flex: 1;
+     margin: 1rem;
+  }
+
+  .box2_1{
+    gap: 5px;
+  }
+
+  .box2_2{
+     gap: 5px;
   }
  
+.box3{
+    flex-direction: column;
+  }
+
+  .box6{
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .pictB{
+     grid-template-columns: repeat(1, 1fr);
+     margin: 1rem;
+  }
+  .pictB img{
+    width: 230px;
+    height: auto;
+  }
+
+  .pictD{
+     grid-template-columns: repeat(1, 1fr);
+     margin: 1rem;
+  }
+
+  .icon1{
+    margin: 10px;
+  }
+
+  .icon2{
+    margin: 10px;
+  }
+
+  .icon1 img{
+    width: 80px;
+    height: auto;
+  }
+
+  .icon2 img{
+   width: 80px;
+    height: auto;
+  }
+
   .textC p{
   font-size: 13px;
   margin-top: 0;
@@ -463,4 +722,9 @@ html {
   margin: 1rem;
  }
 
+ a.button {
+  font-size: 10pt;
+  padding: 6px 10px; 
+ }
+ 
 }

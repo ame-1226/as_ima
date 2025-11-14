@@ -8,10 +8,13 @@
 }
 
 :root{
-  --maincolor :#fad4c0; 
-  --subcolor:#faf0e9;
-  --textcolor:#cba135;
+  --maincolor :#753b36; 
+  --subcolor:#FFFAF4;
+  --textcolor:#553501;
+  --maintextcolor:#cba135;
   --hovercolor:#b2afa7;
+  --tukinecolor:#E6B24C;
+  --shiratamacolor:#BD7071;
 }
 
 
@@ -20,6 +23,11 @@ body {
   background-color:var(--subcolor);
 }
 
+article{
+  max-width: 940px;
+  margin: 2rem auto;
+  justify-content: center;
+}
 
 /*text*/
 p{
@@ -35,19 +43,82 @@ main h2{
   color: var(--textcolor);
   text-align: center;
   padding-top: 15px;
-}
-
-main a p:hover{
-  color: var(--subcoler);
+  font-size: 25pt;
 }
 
 
+
+h3{
+  color: var(--textcolor);
+}
+
+
+.textA{
+  margin: 2rem 2rem 4rem 2rem;/*上・右・下・左*/
+}
+
+.textA p{
+  margin: 2rem 0;
+  line-height: 2rem;
+}
+
+.textB{
+  width: 80%;          /* 任意の幅 */
+  max-width: 600px;    /* 広がりすぎ防止 */
+ justify-content: right;
+}
+
+.textB p{
+   text-align: right;
+}
+
+
+
+.textC{
+  text-align: left;
+  flex: 2;
+  margin: 2rem;/*上・右・下・左*/
+  margin: 0 auto;
+  max-width: 550px;
+  border-radius: 10px;
+}
+
+.textC p{
+  color: var(--textcolor);
+  padding: 2rem;
+}
+
+.textC h2{
+  color: var(--maintextcolor);
+  text-align: center;
+  margin: 0 2rem ;
+}
+
+.textD{
+  text-align: right;
+  margin-top: 10px;
+  font-size: 10pt;
+  text-decoration: underline;
+}
+
+/*アイコンテキスト*/
+.icon1 h3{
+color: var(--tukinecolor);
+font-size: 20pt;
+margin-top: 10px;
+}
+
+.icon2 h3{
+color: var(--shiratamacolor);
+font-size: 20pt;
+margin-top: 10px;
+}
 
 
 /*header*/
 header {
   background: var(--maincolor);
-  color: var(--textcolor);
+  color: var(--maintextcolor);
   padding: 10px 20px;
   position: relative;
   position: sticky;
@@ -57,14 +128,14 @@ header {
 }
 
 header h1 {
-  font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
+  font-family: "firula","louvette-display","hiragino-mincho-pron", cursive, sans-serif;
   font-size: 30px;
   text-align: center;
   padding: 6px 0;
 }
 
 header h1 a {
-  color: var(--textcolor);
+  color: var(--maintextcolor);
 }
 
 .header h1 a:hover {
@@ -80,19 +151,20 @@ color:var(--hovercolor);
 
 footer {
   background: var(--maincolor);
-  color: var(--textcolor);
+  color: var(--maintextcolor);
+}
+
+footer p{
+  color: var(--maintextcolor);
   padding: 40px;
   text-align: center;
   font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
-    
 }
-
 
 
 /*main-menu*/
 .main-menu {
   background: var(--maincolor);
-  color: #FFF;
   position: absolute;
   font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
   top: 22px;
@@ -105,7 +177,7 @@ footer {
 }
 
 .main-menu ul li a {
-  color: var(--textcolor);
+  color: var(--maintextcolor);
   width: auto;
   margin-right: 20px;
   font-size: 20px;
@@ -122,6 +194,7 @@ main {
   font-family: "louvette-display","hiragino-mincho-pron", cursive, sans-serif;
   text-align: center;
   margin: 2rem auto;
+  margin-bottom: 4rem;
   background-color:var(--subcolor);
 }
 
@@ -129,13 +202,28 @@ main a p:hover{
   color: var(--hovercolor);
 }
 
-
-
-.img-item{
-  margin: 2rem;
+main a h3:hover{
+  color: var(--hovercolor);
 }
 
 
+.img-item{
+  margin: 2rem;/*上・右・下・左*/
+
+}
+
+.box{
+  display: flex;
+ margin-bottom: 6rem;
+}
+
+.box2{
+ text-align: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1080px;
+  margin: 1rem auto; 
+}
 
 
 /*javascript*/
@@ -149,6 +237,11 @@ main a p:hover{
 }
 
 /*works img*/
+.img-item img{
+  /*border: 5mm solid #553501;*/
+  border-radius: 10px;
+}
+
 a img{
   width: 100%;
   height: auto;
@@ -168,6 +261,29 @@ max-width: 1980px;
  margin: auto;
   
 }
+
+.icon1 img{
+  margin: 0 auto;
+  flex: 1;
+  border-radius: 50%; 
+  display: block; 
+  max-width: 200px;
+  height: auto;
+  border: 5px solid var(--tukinecolor); 
+  text-align: center;
+}
+
+.icon2 img{
+  margin: 0 auto;
+  flex: 1;
+  border-radius: 50%; 
+  display: block; 
+  max-width: 200px;
+  height: auto;
+ border: 5px solid var(--shiratamacolor); 
+}
+
+
 
 a.pagetop {
   display: block;
@@ -192,6 +308,11 @@ html {
 
 /*スマホ用*/
 @media all and (max-width: 599px) {
+
+  header h1 {
+  text-align: left;
+  
+  }
   
   .main-menu ul {
     display: flex;
@@ -203,7 +324,6 @@ html {
   }
 
   .main-menu ul li a {
-    color: var(--textcolor);
     width: auto;
     margin-right: 20px;
     font-size: 18px;
@@ -225,7 +345,7 @@ html {
   }
 
   main h2 {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .text{
@@ -235,6 +355,20 @@ html {
   .flex{
     flex-direction: column;
   }
+
+  .box{
+    flex-direction: column;
+    scroll-margin-top: 15px;
+  }
+
+  .box2{
+    flex-direction: column;
+  }
+ 
+.box3{
+    flex-direction: column;
+  }
+
 
   #gallery {
   
