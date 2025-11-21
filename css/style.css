@@ -378,10 +378,12 @@ article h2{
 
 .icon1{
   margin: 2rem;
+  justify-items: center;
 }
 
 .icon2{
   margin: 2rem;
+  justify-items: center;
 }
 
 
@@ -661,10 +663,12 @@ html {
 
   .box2_1{
     gap: 5px;
+    margin: 3rem 0;
   }
 
   .box2_2{
      gap: 5px;
+     margin: 3rem 0;
   }
  
 .box3{
@@ -731,6 +735,7 @@ html {
 
  .textC1{
   padding: 0;
+  margin: 0;
  }
 
  .textC1 p{
@@ -739,6 +744,7 @@ html {
 
  .textC2{
   padding: 0;
+  margin: 0;
  }
 
  .textC2 p{
