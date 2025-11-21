@@ -345,7 +345,7 @@ html {
   }
 
   main h2 {
-    font-size: 15px;
+    font-size: 25px;
   }
 
   .text{
@@ -373,7 +373,7 @@ html {
   #gallery {
   
     grid-template-columns: 1fr 1fr;
-  
+    display: block;
   }
   
 }
