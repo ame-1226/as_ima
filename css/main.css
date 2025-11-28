@@ -8,7 +8,7 @@
 }
 
 :root{
-  --maincolor :#753b36; 
+  --maincolor :#c36675; 
   --subcolor:#FFFAF4;
   --textcolor:#553501;
   --maintextcolor:#cba135;
@@ -371,12 +371,9 @@ html {
 
 
   #gallery {
+  
+    grid-template-columns: 1fr 1fr;
     display: block;
-
-  }
-
-  .img-item{
-    margin: 1rem 0 4rem 0;/*上・右・下・左*/
   }
   
 }

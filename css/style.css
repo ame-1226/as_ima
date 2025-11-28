@@ -8,7 +8,7 @@
 }
 
 :root{
-  --maincolor :#5C4636; 
+  --maincolor :#c36675; 
   --subcolor:#FFFAF4;
   --textcolor:#553501;
   --maintextcolor:#cba135;
@@ -27,7 +27,7 @@ body {
 
 /*header&footer色変更*/
 body.honey{
-  --maincolor: #f7ba4f;
+  --maincolor: #f5ae69;
   --maintextcolor:#553501;
   --hovercolor:#9c9992;
 }
@@ -39,6 +39,13 @@ body.nemophila{
 
 body.letter{
   --maincolor: #b6acd3;
+   --maintextcolor:#354b64;
+  --hovercolor:#797b82;
+
+}
+
+body.ayakashi{
+  --maincolor: #98b2ad;
    --maintextcolor:#354b64;
   --hovercolor:#797b82;
 
@@ -94,8 +101,9 @@ main a p:hover{
   justify-content: center;
   flex: 2;
   margin: 1rem;/*上・右・下・左*/
-  background-color: var(--tukinecolor);
+  /*background-color: var(--tukinecolor);*/
   border-radius: 20px;
+  border: 5px solid var(--tukinecolor); 
 }
 
 .textC1 p{
@@ -112,16 +120,48 @@ main a p:hover{
 
 /*制作者コメントしらたま*/
 .textC2{
-  justify-content: center;
-  flex: 2;
-  margin: 1rem;/*上・右・下・左*/
-  background-color: var(--shiratamacolor);
-  border-radius: 20px;
+  display:flex;
+  align-items:center;
+  margin:1rem;
+  padding:16px 20px;          /* ちょっと大きく */
+  border-radius:20px;
+  border:5px solid var(--shiratamacolor);
+  position:relative;
+  max-width:85%;              /* 大きくする */
+  background:var(--subcolor);
+  text-align:left;            /* 中の文字は左揃えのまま */
+  justify-content:flex-end;
+}
+
+.textC2::before{
+  content:"";
+  position:absolute;
+  right:-30px;                 /* 三角が大きくなる分だけ外側へ */
+  top:50%;                /* 好みで上下調整 */
+  transform:translateY(-50%); /* ← 中心を合わせる */
+  width:0;
+  height:0;
+  border-top:20px solid transparent;   /* ← 高さ */
+  border-bottom:20px solid transparent;/* ← 高さ */
+  border-left:30px solid var(--shiratamacolor); /* ← 幅・色 */
+}
+
+.textC2::after{
+  content:"";
+  position:absolute;
+  right:-20px;   /* before - 枠線太さ分 */
+  top:50%;
+  transform:translateY(-50%);
+  width:0;
+  height:0;
+  border-top:13px solid transparent;
+  border-bottom:13px solid transparent;
+  border-left:20px solid var(--subcolor); /* 背景色に合わせる */
 }
 
 .textC2 p{
   text-align: left;
-  color: var(--shitextcolor);
+  color: var(--textcolor);
   padding: 2rem;
 }
 
@@ -151,6 +191,12 @@ main a p:hover{
 .textE{
   justify-items: center;
   text-align: center;
+  flex: 1;
+}
+
+.textF{
+  justify-items: center;
+  text-align: left;
   flex: 1;
 }
 
@@ -313,10 +359,11 @@ main p a{
 }
 
 .box2_2{
-  display: flex;   
-  flex-direction: row-reverse;         
-  justify-content: center; 
-  align-items: center;
+  display:flex;
+  justify-content:flex-end;   /* 右寄せ */
+  align-items:center;         /* 縦方向中央寄せ */
+  gap:10px;  
+  flex-direction: row-reverse;          
   gap: 20px;
   width: 100%;
   max-width: 1080px;
@@ -378,12 +425,12 @@ article h2{
 
 .icon1{
   margin: 2rem;
-  justify-items: center;
+  text-align: center;
 }
 
 .icon2{
   margin: 2rem;
-  justify-items: center;
+  text-align: center;
 }
 
 
@@ -443,6 +490,7 @@ img {
   max-width: 100%;
   margin: 0;
   display:block;
+  
 }
 
 .main-vl img{
@@ -522,6 +570,43 @@ img {
   max-width: 80%;
   height: auto;
   text-align: center;
+}
+
+.pictE img{
+  border-radius: 10px; 
+}
+
+.pictF{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 2rem 4rem; /* ← autoで中央寄せ */
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  scroll-margin-top: 150px;
+}
+
+.pictF img{
+  border-radius: 10px; 
+}
+
+.pictchara{
+  display: inline-block;
+  text-align: center;
+  max-width:300px ;
+  height: auto;
+  flex: 3;
+   scroll-margin-top: 150px;
+   margin-right: 2rem;
+   background-color: var(--maincolor);
+   border-radius: 10px;
+}
+
+.pictchara img{
+  border-radius: 10px; 
+  
 }
 
 
@@ -663,12 +748,10 @@ html {
 
   .box2_1{
     gap: 5px;
-    margin: 3rem 0;
   }
 
   .box2_2{
      gap: 5px;
-     margin: 3rem 0;
   }
  
 .box3{
@@ -718,6 +801,10 @@ html {
     border: 3px solid var(--shiratamacolor); 
   }
 
+  h3{
+    font-size: 10px;
+  }
+
   .textC p{
   font-size: 13px;
   margin-top: 0;
@@ -735,7 +822,6 @@ html {
 
  .textC1{
   padding: 0;
-  margin: 0;
  }
 
  .textC1 p{
@@ -744,7 +830,6 @@ html {
 
  .textC2{
   padding: 0;
-  margin: 0;
  }
 
  .textC2 p{
