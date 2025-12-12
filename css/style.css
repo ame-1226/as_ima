@@ -120,44 +120,15 @@ main a p:hover{
 
 /*制作者コメントしらたま*/
 .textC2{
-  display:flex;
   align-items:center;
+  flex: 2;
   margin:1rem;
-  padding:16px 20px;          /* ちょっと大きく */
   border-radius:20px;
   border:5px solid var(--shiratamacolor);
-  position:relative;
-  max-width:85%;              /* 大きくする */
-  background:var(--subcolor);
-  text-align:left;            /* 中の文字は左揃えのまま */
-  justify-content:flex-end;
+  justify-content:center;
 }
 
-.textC2::before{
-  content:"";
-  position:absolute;
-  right:-30px;                 /* 三角が大きくなる分だけ外側へ */
-  top:50%;                /* 好みで上下調整 */
-  transform:translateY(-50%); /* ← 中心を合わせる */
-  width:0;
-  height:0;
-  border-top:20px solid transparent;   /* ← 高さ */
-  border-bottom:20px solid transparent;/* ← 高さ */
-  border-left:30px solid var(--shiratamacolor); /* ← 幅・色 */
-}
 
-.textC2::after{
-  content:"";
-  position:absolute;
-  right:-20px;   /* before - 枠線太さ分 */
-  top:50%;
-  transform:translateY(-50%);
-  width:0;
-  height:0;
-  border-top:13px solid transparent;
-  border-bottom:13px solid transparent;
-  border-left:20px solid var(--subcolor); /* 背景色に合わせる */
-}
 
 .textC2 p{
   text-align: left;
@@ -360,10 +331,10 @@ main p a{
 
 .box2_2{
   display:flex;
-  justify-content:flex-end;   /* 右寄せ */
+  justify-content:center;   /* 右寄せ */
   align-items:center;         /* 縦方向中央寄せ */
   gap:10px;  
-  flex-direction: row-reverse;          
+  flex-direction: row-reverse;     
   gap: 20px;
   width: 100%;
   max-width: 1080px;
@@ -416,7 +387,7 @@ article h2{
 .order{
   border: 3px solid var(--maincolor);
   outline: 2px solid var(--maincolor);
-  outline-offset: -7px; /* 内側に寄せる */
+  outline-offset: 3px; /* 内側に寄せる */
   border-radius: 50px; 
   padding: 10px;
   margin: 2rem;
@@ -458,6 +429,9 @@ a.button:hover {
   background-color: var(--maintextcolor);  
   color: var(--maincolor);             
 }
+
+
+
 
 
 /*javascript*/
@@ -803,6 +777,10 @@ html {
 
   h3{
     font-size: 10px;
+  }
+
+  .order h3{
+    font-size: 16px;
   }
 
   .textC p{
