@@ -284,6 +284,27 @@ max-width: 1980px;
 }
 
 
+/*ボタン要素*/
+
+a.button {
+  display: inline-block;       /* 横幅を文字に合わせる */
+  padding: 8px 16px;           /* 上下8px 左右16pxの余白 */
+  margin: 4px;                 /* リンク間の余白 */
+  color: var(--subcolor);              /* 文字色 */
+  background-color: var(--maincolor);   /* 背景色 */
+  border-radius: 20px;         /* 角丸 */
+  text-decoration: none;       /* 下線を消す */
+  font-weight: bold;           /* 太字にする場合 */
+  transition: background-color 0.3s, color 0.3s; /* ホバーアニメーション */
+}
+
+/* ホバー時 */
+a.button:hover {
+  background-color: var(--hovercolor);  
+  color: var(--subcolor);             
+}
+
+
 
 a.pagetop {
   display: block;

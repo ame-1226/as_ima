@@ -51,6 +51,13 @@ body.ayakashi{
 
 }
 
+body.raverina{
+  --maincolor: #c8796b;
+   --maintextcolor:#553501;
+  --hovercolor:#797b82;
+
+}
+
 
 article{
   margin: 6rem 2rem 10rem 2rem;/*上・右・下・左*/
@@ -316,7 +323,7 @@ main p a{
   width: 100%;
   max-width: 1080px;
   padding: 2rem 4rem 2rem 4rem;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
 }
 
 .box2_1{
@@ -432,6 +439,48 @@ a.button:hover {
 
 
 
+/* 旅日記スクロール */
+.diary-wrapper {
+  margin-top: 80px;        /* ヘッダー分 */
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;        /* ページは横に動かさない */
+}
+
+.travel-diary {
+  display: flex;
+  width: 100vw;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.diary-card {
+  flex: 0 0 80vw;          /* 少し小さく */
+  margin: 0 10vw;          /* 左右余白で中央に */
+  scroll-snap-align: center;
+  max-width: 90%;
+}
+
+.meta {
+  text-align: left;
+  font-size: 1.3rem;
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+}
+
+.textM {
+  line-height: 2.1;          /*行間 数字だけ→文字サイズ×倍率*/
+  text-align: left;
+  letter-spacing: 0.01em;   /* 文字間の隙間 */
+}
+
+.textMs{
+  text-align: right;
+  padding: 10px;
+}
+
 
 
 /*javascript*/
@@ -499,6 +548,7 @@ img {
 }
 
 .pictA{
+  flex: 1;
   display: inline-block;
   text-align: center;
   max-width:100% ;
@@ -506,7 +556,7 @@ img {
   flex: 3;
    scroll-margin-top: 150px;
    margin-right: 2rem;
-   background-color: var(--maincolor);
+   /*background-color: var(--maincolor);*/
    border-radius: 10px;
 }
 
@@ -536,6 +586,11 @@ img {
   max-width: 100%;
   height: auto;
   scroll-margin-top: 150px;
+  border-radius: 10px;
+}
+
+.pictD img{
+  border-radius: 10px;
 }
 
 .pictE{
@@ -566,15 +621,54 @@ img {
   border-radius: 10px; 
 }
 
+.pictG{
+  flex: 4;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin: 2rem 4rem; /* ← autoで中央寄せ */
+  max-width: 100%;
+  height: auto;
+  scroll-margin-top: 150px;
+  border-radius: 10px;
+}
+
+.pictG img{
+  border-radius: 10px; 
+}
+
+.pictH{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-items: center;
+  margin: 2rem 4rem; /* ← autoで中央寄せ */
+  max-width: 100%;
+  height: auto;
+  scroll-margin-top: 150px;
+ 
+}
+
+.pictH .wide{
+  grid-column: 1 / -1; /* ← 1段目を「1列使い」ではなく「2列またぎ」にする */
+}
+
+.pictH img{
+  border-radius: 10px; 
+  max-width: 530px;
+  height: auto;
+}
+
 .pictchara{
   display: inline-block;
   text-align: center;
-  max-width:300px ;
+  max-width:400px ;
   height: auto;
-  flex: 3;
+  flex: 2;
    scroll-margin-top: 150px;
    margin-right: 2rem;
-   background-color: var(--maincolor);
+   /*background-color: var(--maincolor);*/
    border-radius: 10px;
 }
 
@@ -751,6 +845,27 @@ html {
   .pictD{
      grid-template-columns: repeat(1, 1fr);
      margin: 1rem;
+  }
+
+  .pictE{
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+
+  .pictF{
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 1rem;
+  }
+
+  .pictH{
+     grid-template-columns: repeat(1, 1fr);
+     margin: 1rem;
+  }
+
+  .pictH img{
+    width: 230px;
+    height: auto;
   }
 
   .icon1{
