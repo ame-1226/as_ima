@@ -50,6 +50,7 @@ main h2{
 
 h3{
   color: var(--textcolor);
+  margin-top: 1rem;
 }
 
 

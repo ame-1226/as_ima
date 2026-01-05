@@ -656,8 +656,8 @@ img {
 
 .pictH img{
   border-radius: 10px; 
-  max-width: 530px;
-  height: auto;
+  max-height: 800px;
+  width: auto;
 }
 
 .pictchara{
