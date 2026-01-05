@@ -11,7 +11,7 @@
   --maincolor :#c36675; 
   --subcolor:#FFFAF4;
   --textcolor:#553501;
-  --maintextcolor:#cba135;
+  --maintextcolor:#ddb349;
   --hovercolor:#b2afa7;
   --tukinecolor:#E6B24C;
   --shiratamacolor:#BD7071;
@@ -64,6 +64,7 @@ h3{
 .textA p{
   margin: 2rem 0;
   line-height: 2rem;
+  padding: 1rem;
 }
 
 .textB{
@@ -105,6 +106,13 @@ h3{
 }
 
 .textD{
+  text-align: right;
+  margin-top: 10px;
+  font-size: 10pt;
+  text-decoration: underline;
+}
+
+.textE{
   text-align: right;
   margin-top: 10px;
   font-size: 8pt;
@@ -298,8 +306,8 @@ max-width: 1980px;
 
 a.button {
   display: inline-block;       /* 横幅を文字に合わせる */
-  padding: 4px 6px;           /* 上下8px 左右16pxの余白 */
-  margin: 2px;                 /* リンク間の余白 */
+  padding: 2px 6px;           /* 上下8px 左右16pxの余白 */
+  margin: 4px;                 /* リンク間の余白 */
   color: var(--textcolor);              /* 文字色 */
   background-color: var(--subcolor);   /* 背景色 */
   border-radius: 20px;         /* 角丸 */
@@ -312,6 +320,26 @@ a.button {
 /* ホバー時 */
 a.button:hover {
   background-color: var(--maincolor);  
+  color: var(--subcolor);             
+}
+
+
+/*PDFボタン要素*/
+a.button2 {
+  display: inline-block;       /* 横幅を文字に合わせる */
+  padding: 4px 16px;           /* 上下8px 左右16pxの余白 */
+  margin: 2px;                 /* リンク間の余白 */
+  color: var(--subcolor);              /* 文字色 */
+  background-color: var(--maincolor);   /* 背景色 */
+  border-radius: 20px;         /* 角丸 */
+  text-decoration: none;       /* 下線を消す */
+  font-weight: bold;           /* 太字にする場合 */
+  transition: background-color 0.3s, color 0.3s; /* ホバーアニメーション */
+}
+
+/* ホバー時 */
+a.button2:hover {
+  background-color: var(--hovercolor);  
   color: var(--subcolor);             
 }
 
@@ -395,6 +423,16 @@ html {
   padding: 0 1rem;
    line-height: 2.0;
 }
+
+.textB{
+  margin: 0 1rem 4rem 1rem;/*上・右・下・左*/
+}
+
+.textB h3{
+  font-size: 18pt;
+  margin: 0;
+}
+
 
 .textC p{
   padding: 1rem;

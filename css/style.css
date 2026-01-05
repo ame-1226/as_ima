@@ -119,6 +119,7 @@ main a p:hover{
   text-align: left;
   color: var(--textcolor);
   padding: 2rem;
+  line-height: 1.6;
 }
 
 .textC1 h2{
@@ -143,6 +144,7 @@ main a p:hover{
   text-align: left;
   color: var(--textcolor);
   padding: 2rem;
+  line-height: 1.6;
 }
 
 .textC2 h2{
