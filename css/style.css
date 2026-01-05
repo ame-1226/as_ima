@@ -778,7 +778,7 @@ html {
   }
 
   main p{
-    font-size: 13px;
+    font-size: 15px;
   }
 
   main h2 {
@@ -787,6 +787,11 @@ html {
 
   .text{
     margin: 0;
+  }
+
+  .text p{
+    font-size: 10px;
+    margin: 5px 1rem;
   }
   
   .flex{
@@ -833,14 +838,18 @@ html {
     margin: 1rem;
   }
 
+  .order{
+    margin: 1rem;
+  }
+
   .pictB{
      grid-template-columns: repeat(1, 1fr);
      margin: 1rem;
   }
-  .pictB img{
+  /*.pictB img{
     width: 230px;
     height: auto;
-  }
+  }*/
 
   .pictD{
      grid-template-columns: repeat(1, 1fr);
@@ -863,10 +872,10 @@ html {
      margin: 1rem;
   }
 
-  .pictH img{
+  /*.pictH img{
     width: 230px;
     height: auto;
-  }
+  }*/
 
   .icon1{
     margin: 10px;

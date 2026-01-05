@@ -54,8 +54,11 @@ h3{
 }
 
 
+
 .textA{
-  margin: 2rem 2rem 4rem 2rem;/*上・右・下・左*/
+  width: 100%;
+  margin: 2rem auto;         
+  text-align: left; 
 }
 
 .textA p{
@@ -64,16 +67,21 @@ h3{
 }
 
 .textB{
-  width: 80%;          /* 任意の幅 */
-  max-width: 600px;    /* 広がりすぎ防止 */
- justify-content: right;
-}
-
-.textB p{
-   text-align: right;
+  margin: 0 2rem 4rem 2rem;/*上・右・下・左*/
+  display: grid;
+ justify-content: end;
 }
 
 
+
+
+.textB h3{
+  color: var(--maintextcolor);
+  font-family: "firula","louvette-display","hiragino-mincho-pron", cursive, sans-serif;
+  font-size: 20pt;
+  margin: 0;
+  text-align: left;
+}
 
 .textC{
   text-align: left;
@@ -87,6 +95,7 @@ h3{
 .textC p{
   color: var(--textcolor);
   padding: 2rem;
+  line-height: 1.8;
 }
 
 .textC h2{
@@ -366,6 +375,10 @@ html {
     
   }
 
+  main p{
+    font-size: 15px;
+  }
+
   main h2 {
     font-size: 25px;
   }
@@ -373,6 +386,15 @@ html {
   .text{
     margin: 0;
   }
+
+  .textA p{
+  padding: 0 1rem;
+   line-height: 2.0;
+}
+
+.textC p{
+  padding: 1rem;
+}
   
   .flex{
     flex-direction: column;
@@ -381,6 +403,7 @@ html {
   .box{
     flex-direction: column;
     scroll-margin-top: 15px;
+    margin-bottom: 1rem;
   }
 
   .box2{
