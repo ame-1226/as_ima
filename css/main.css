@@ -107,7 +107,7 @@ h3{
 .textD{
   text-align: right;
   margin-top: 10px;
-  font-size: 10pt;
+  font-size: 8pt;
   text-decoration: underline;
 }
 
@@ -298,19 +298,20 @@ max-width: 1980px;
 
 a.button {
   display: inline-block;       /* 横幅を文字に合わせる */
-  padding: 8px 16px;           /* 上下8px 左右16pxの余白 */
-  margin: 4px;                 /* リンク間の余白 */
-  color: var(--subcolor);              /* 文字色 */
-  background-color: var(--maincolor);   /* 背景色 */
+  padding: 4px 6px;           /* 上下8px 左右16pxの余白 */
+  margin: 2px;                 /* リンク間の余白 */
+  color: var(--textcolor);              /* 文字色 */
+  background-color: var(--subcolor);   /* 背景色 */
   border-radius: 20px;         /* 角丸 */
   text-decoration: none;       /* 下線を消す */
   font-weight: bold;           /* 太字にする場合 */
+  border: 2px solid var(--maincolor); 
   transition: background-color 0.3s, color 0.3s; /* ホバーアニメーション */
 }
 
 /* ホバー時 */
 a.button:hover {
-  background-color: var(--hovercolor);  
+  background-color: var(--maincolor);  
   color: var(--subcolor);             
 }
 
@@ -369,7 +370,10 @@ html {
     text-align: center;
   }
   
-  
+  .img-item{
+    margin: 2rem 0 4rem 0;
+  }
+
   .pict {
     width: 100%;
     
@@ -395,6 +399,8 @@ html {
 .textC p{
   padding: 1rem;
 }
+
+
   
   .flex{
     flex-direction: column;
@@ -421,4 +427,8 @@ html {
     display: block;
   }
   
+  footer p{
+    padding: 25px;
+
+  }
 }

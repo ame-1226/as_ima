@@ -323,7 +323,7 @@ main p a{
   width: 100%;
   max-width: 1080px;
   padding: 2rem 4rem 2rem 4rem;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
 }
 
 .box2_1{
@@ -627,7 +627,6 @@ img {
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   justify-items: center;
-  margin: 2rem 4rem; /* ← autoで中央寄せ */
   max-width: 100%;
   height: auto;
   scroll-margin-top: 150px;
@@ -877,6 +876,12 @@ html {
     height: auto;
   }*/
 
+  .pictchara {
+    max-width: 200px;
+    height: auto;
+    margin: 0;
+}
+
   .icon1{
     margin: 10px;
    
@@ -907,6 +912,10 @@ html {
     font-size: 16px;
   }
 
+  .textB{
+    margin: 0;
+  }
+
   .textC p{
   font-size: 13px;
   margin-top: 0;
@@ -924,6 +933,8 @@ html {
 
  .textC1{
   padding: 0;
+  border: 3px solid var(--tukinecolor);
+  margin: 1rem 0;
  }
 
  .textC1 p{
@@ -932,10 +943,19 @@ html {
 
  .textC2{
   padding: 0;
+  border: 3px solid var(--shiratamacolor);
+  margin: 1rem 0;
  }
 
  .textC2 p{
   padding: 1rem;
+ }
+
+ .textD{
+  margin: 2rem auto;
+  line-height: 2.0;
+  /*letter-spacing: 0.01em;*/
+  width: 94%;
  }
 
  a.button {
@@ -943,4 +963,9 @@ html {
   padding: 6px 10px; 
  }
  
+footer p{
+  padding: 25px;
+  
+}
+
 }
