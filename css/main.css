@@ -29,6 +29,41 @@ article{
   justify-content: center;
 }
 
+/*メインビジュアル切り替え*/
+.slider{
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 3 / 2; /* 高さ確保 */
+  overflow: hidden;
+}
+
+.slide{
+  position: absolute;   /* ←これが無いと縦に並ぶ */
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.slide.active{
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider img{
+  width: 100%;
+max-width: 1980px;
+  height: auto;
+ 
+  
+}
+
 /*text*/
 p{
   color: var(--textcolor);
@@ -366,6 +401,7 @@ a.pagetop {
   position: fixed;
   bottom: 10px;
   right: 20px;
+  z-index: 1000;
 }
 
 html {
