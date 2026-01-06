@@ -25,14 +25,7 @@ for(let i = 0; i < items.length; i++){
 
 const slides = document.querySelectorAll('.slide');
 let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 4000);
-
-let timer = setInterval(slideShow, 4000);
+let timer;
 
 function slideShow(){
   slides[index].classList.remove('active');
@@ -40,12 +33,19 @@ function slideShow(){
   slides[index].classList.add('active');
 }
 
+// 初期起動（1回だけ）
+if(slides.length > 1){
+  timer = setInterval(slideShow, 7000);
+}
+
+// hoverで停止
 document.querySelector('.slider').addEventListener('mouseenter', () => {
   clearInterval(timer);
 });
 
+// hover解除で再開
 document.querySelector('.slider').addEventListener('mouseleave', () => {
-  timer = setInterval(slideShow, 4000);
+  timer = setInterval(slideShow, 7000);
 });
 
 
