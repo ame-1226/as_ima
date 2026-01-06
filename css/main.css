@@ -33,7 +33,7 @@ article{
 .slider{
   position: relative;
   width: 100%;
-  max-width: 1920px;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 3 / 2; /* 高さ確保 */
   overflow: hidden;
@@ -59,7 +59,7 @@ article{
 
 .slider img{
   width: 100%;
-max-width: 100%;
+max-width: 1920px;
   height: auto;
  margin: 0 auto;
   
