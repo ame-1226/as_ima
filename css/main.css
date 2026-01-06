@@ -68,7 +68,7 @@ h3{
 }
 
 .textB{
-  margin: 0 2rem 4rem 2rem;/*上・右・下・左*/
+  margin: 0 2rem 15rem 2rem;/*上・右・下・左*/
   display: grid;
  justify-content: end;
 }
@@ -108,6 +108,7 @@ h3{
 .textD{
   text-align: right;
   margin-top: 10px;
+  margin-bottom: 15rem;
   font-size: 10pt;
   text-decoration: underline;
 }
@@ -232,7 +233,7 @@ main a h3:hover{
 
 .box{
   display: flex;
- margin-bottom: 6rem;
+ margin-bottom: 15rem;
 }
 
 .box2{
