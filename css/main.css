@@ -35,7 +35,7 @@ article{
   width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2; /* 高さ確保 */
+  aspect-ratio: 16 / 9; /* 高さ確保 */
   overflow: hidden;
 }
 
