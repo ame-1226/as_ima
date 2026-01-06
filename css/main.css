@@ -59,10 +59,9 @@ article{
 
 .slider img{
   width: 100%;
-max-width: 1920px;
+max-width: 100%;
   height: auto;
  margin: 0 auto;
- justify-content: center;
   
 }
 
