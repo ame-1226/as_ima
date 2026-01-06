@@ -108,7 +108,6 @@ h3{
 .textD{
   text-align: right;
   margin-top: 10px;
-  margin-bottom: 15rem;
   font-size: 10pt;
   text-decoration: underline;
 }
@@ -117,6 +116,14 @@ h3{
   text-align: right;
   margin-top: 10px;
   font-size: 8pt;
+  text-decoration: underline;
+}
+
+.textF{
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 15rem;
+  font-size: 10pt;
   text-decoration: underline;
 }
 
@@ -400,7 +407,7 @@ html {
   }
   
   .img-item{
-    margin: 2rem 0 4rem 0;
+    margin: 2rem 0 6rem 0;
   }
 
   .pict {
@@ -426,7 +433,7 @@ html {
 }
 
 .textB{
-  margin: 0 1rem 4rem 1rem;/*上・右・下・左*/
+  margin: 0 1rem 10rem 1rem;/*上・右・下・左*/
 }
 
 .textB h3{
@@ -439,7 +446,9 @@ html {
   padding: 1rem;
 }
 
-
+.textF{
+  margin-bottom: 10rem;
+}
   
   .flex{
     flex-direction: column;
@@ -448,7 +457,7 @@ html {
   .box{
     flex-direction: column;
     scroll-margin-top: 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 10rem;
   }
 
   .box2{
