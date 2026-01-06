@@ -164,6 +164,16 @@ main a p:hover{
   text-align: left; 
 }
 
+.text2{
+  justify-content: center;
+}
+
+.text2 p{
+  font-size: 12px;
+  margin: 5px 0;
+  text-align: left; 
+}
+
 .textD{
   width: 80%;
   margin: 2rem auto;         
